@@ -1,0 +1,19 @@
+{
+  "name": "decimal-to-roman",
+  "version": "0.0.0",
+  "description": "A command-line utility for converting decial numbers to roman numerals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "numbers",
+    "numerals",
+    "roman",
+    "utility"
+  ],
+  "author": "Katie Fenn",
+  "license": "ISC",
+  "devDependencies": {
+  }
+}
