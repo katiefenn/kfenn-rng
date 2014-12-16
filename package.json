@@ -15,5 +15,6 @@
   "author": "Katie Fenn",
   "license": "ISC",
   "devDependencies": {
+    "mocha": "~2.0.1"
   }
 }
