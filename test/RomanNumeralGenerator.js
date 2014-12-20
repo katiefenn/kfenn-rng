@@ -51,6 +51,10 @@ describe("RomanNumeralGenerator", function () {
             romanNumeralGenerator.generate(11).should.equal("XI");
         });
 
+        it("should return 'XV' when called with '15'", function () {
+            romanNumeralGenerator.generate(15).should.equal("XV");
+        });
+
         it("should return 'XX' when called with '20'", function () {
             romanNumeralGenerator.generate(20).should.equal("XX");
         });

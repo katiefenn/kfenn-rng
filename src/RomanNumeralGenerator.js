@@ -80,7 +80,7 @@ function getIVs(decimalValue) {
 }
 
 function getVs(decimalValue) {
-    if (units(decimalValue) >= 5 && units(decimalValue < 9)) {
+    if (units(decimalValue) >= 5 && units(decimalValue) < 9) {
         return "V";
     }
 
