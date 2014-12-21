@@ -188,11 +188,11 @@ function units(decimalValue) {
 }
 
 function tens(decimalValue) {
-    return Math.floor(decimalValue / 10) % 10;
+    return Math.floor((decimalValue / 10) % 10);
 }
 
 function hundreds(decimalValue) {
-    return Math.floor(decimalValue / 100) % 100;
+    return Math.floor((decimalValue / 100) % 10);
 }
 
 module.exports = RomanNumeralGenerator;

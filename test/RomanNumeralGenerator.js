@@ -131,6 +131,26 @@ describe("RomanNumeralGenerator", function () {
             romanNumeralGenerator.generate(1000).should.equal("M");
         });
 
+        it("should return 'MX' when called with '1010'", function () {
+            romanNumeralGenerator.generate(1010).should.equal("MX");
+        });
+
+        it("should return 'ML' when called with '1050'", function () {
+            romanNumeralGenerator.generate(1050).should.equal("ML");
+        });
+
+        it("should return 'MC' when called with '1100'", function () {
+            romanNumeralGenerator.generate(1100).should.equal("MC");
+        });
+
+        it("should return 'MD' when called with '1500'", function () {
+            romanNumeralGenerator.generate(1500).should.equal("MD");
+        });
+
+        it("should return 'MCM' when called with '1900'", function () {
+            romanNumeralGenerator.generate(1900).should.equal("MCM");
+        });
+
         it("should return 'MM' when called with '2000'", function () {
             romanNumeralGenerator.generate(2000).should.equal("MM");
         });
