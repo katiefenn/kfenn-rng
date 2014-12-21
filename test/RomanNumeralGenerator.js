@@ -267,5 +267,13 @@ describe("RomanNumeralGenerator", function () {
             romanNumeralGenerator.isValidNumeral('VX').should.be.false;
         });
 
+        it("should return false when called with a non-string-or-array", function () {
+            romanNumeralGenerator.isValidNumeral(9).should.be.false;
+        });
+
+        it("should return false when called with a non-numeral string", function () {
+            romanNumeralGenerator.isValidNumeral('IP').should.be.false;
+        });
+
     });
 });

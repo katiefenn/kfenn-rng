@@ -84,12 +84,21 @@ function numeralToArray(romanValue) {
 
 RomanNumeralGenerator.prototype.isValidNumeral = function (romanValue) {
     var numeralArray,
+        invalidString = /[^IVXLCDM]+/gi,
         result = true;
 
-    if ( typeof romanValue  === 'string' ) {
+    if (isString(romanValue)) {
         numeralArray = numeralToArray(romanValue);
-    } else {
+    }
+    else if (isArray(romanValue)) {
         numeralArray = romanValue;
+    }
+    else {
+        return false;
+    }
+
+    if (invalidString.test(romanValue)) {
+        return false;
     }
 
     each(numeralArray, function (index, numeral) {
@@ -259,6 +268,14 @@ function itemsByValue(collection, value) {
     });
 
     return items;
+}
+
+function isArray(obj) {
+    return Object.prototype.toString.call(obj) === '[object Array]';
+}
+
+function isString(obj) {
+    return typeof obj === 'string';
 }
 
 module.exports = RomanNumeralGenerator;
