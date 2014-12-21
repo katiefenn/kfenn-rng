@@ -169,6 +169,10 @@ describe("RomanNumeralGenerator", function () {
             romanNumeralGenerator.parse('III').should.equal(3);
         });
 
+        it("should return '0' when called with 'IIII'", function () {
+            romanNumeralGenerator.parse('IIII').should.equal(-1);
+        });
+
         it("should return '4' when called with 'IV'", function () {
             romanNumeralGenerator.parse('IV').should.equal(4);
         });
@@ -252,5 +256,16 @@ describe("RomanNumeralGenerator", function () {
         it("should return '2000' when called with 'MM'", function () {
             romanNumeralGenerator.parse('MM').should.equal(2000);
         });
+    });
+
+    describe("isValidNumeral method", function () {
+        it("should return false when called with invalid numeral frequency", function () {
+            romanNumeralGenerator.isValidNumeral('IIII').should.be.false;
+        });
+
+        it("should return false when called with ascending order numeral", function () {
+            romanNumeralGenerator.isValidNumeral('VX').should.be.false;
+        });
+
     });
 });
