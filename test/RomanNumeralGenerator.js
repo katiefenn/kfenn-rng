@@ -275,5 +275,9 @@ describe("RomanNumeralGenerator", function () {
             romanNumeralGenerator.isValidNumeral('IP').should.be.false;
         });
 
+        it("should return false when called with IXI", function () {
+            romanNumeralGenerator.isValidNumeral('IXI').should.be.false;
+        });
+
     });
 });
