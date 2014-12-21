@@ -154,6 +154,10 @@ describe("RomanNumeralGenerator", function () {
         it("should return 'MM' when called with '2000'", function () {
             romanNumeralGenerator.generate(2000).should.equal("MM");
         });
+
+        it("should return '' when called with '12.1'", function () {
+            romanNumeralGenerator.generate(12.1).should.equal("");
+        });
     });
 
     describe("parse method", function () {
