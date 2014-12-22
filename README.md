@@ -7,6 +7,19 @@ The Roman Numeral Generator is bundled as a CommonJS module. To used, load it in
 ```
 var RomanNumeralGenerator = require("../src/RomanNumeralGenerator"),
     romanNumeralGenerator = new RomanNumeralGenerator();
+    
+romanNumeralGenerator.generate(7);
+// "VII"
+
+romanNumeralGenerator.parse('VII');
+// 7
+
+// Invalid input responses:
+romanNumeralGenerator.generate(0);
+// ""
+
+romanNumeralGenerator.parse('FOO');
+// -1
 ```
 
 ## Development
@@ -15,6 +28,7 @@ This module is developed using Grunt to automate common development tasks. Mocha
 To run grunt, use the following command:
 
 ```
+npm install
 grunt dev
 ```
 
