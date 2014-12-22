@@ -260,6 +260,10 @@ describe("RomanNumeralGenerator", function () {
         it("should return '2000' when called with 'MM'", function () {
             romanNumeralGenerator.parse('MM').should.equal(2000);
         });
+
+        it("should return '-1' when called with '1'", function () {
+            romanNumeralGenerator.parse(1).should.equal(-1);    
+        });
     });
 
     describe("isValidNumeral method", function () {
